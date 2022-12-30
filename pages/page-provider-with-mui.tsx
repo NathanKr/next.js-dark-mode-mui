@@ -1,7 +1,9 @@
 import { FC, ReactNode, useEffect, useState } from "react";
 import { darkTheme, lightTheme } from "../src/themes";
-import { CssBaseline, ThemeProvider } from "@mui/material";
+import { Button, CssBaseline, ThemeProvider } from "@mui/material";
 import { useTheme } from "next-themes";
+import { MdDarkMode } from "react-icons/md";
+import { MdLightMode } from "react-icons/md";
 
 const PageProviderWithMui: FC<{ children: ReactNode }> = ({ children }) => {
   const [mounted, setMounted] = useState(false);
@@ -13,10 +15,15 @@ const PageProviderWithMui: FC<{ children: ReactNode }> = ({ children }) => {
     return null;
   }
 
+  function toggleTheme() {
+    setTheme(theme == "dark" ? "light" : "dark");
+  }
+
   return (
     <ThemeProvider theme={theme == "dark" ? darkTheme : lightTheme}>
-      <button onClick={() => setTheme("light")}>set light</button>
-      <button onClick={() => setTheme("dark")}>set dark</button>
+      <span onClick={toggleTheme}>
+        {theme == "dark" ? <MdLightMode /> : <MdDarkMode />}
+      </span>
       {/* it is not working without CssBaseline */}
       <CssBaseline />
       {children}

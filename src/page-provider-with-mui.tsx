@@ -1,6 +1,6 @@
 import { FC, ReactNode, useEffect, useState } from "react";
-import { darkTheme, lightTheme } from "../src/themes";
-import { Button, CssBaseline, ThemeProvider } from "@mui/material";
+import { darkTheme, lightTheme } from "./themes";
+import { CssBaseline, ThemeProvider } from "@mui/material";
 import { useTheme } from "next-themes";
 import { MdDarkMode } from "react-icons/md";
 import { MdLightMode } from "react-icons/md";
@@ -21,6 +21,7 @@ const PageProviderWithMui: FC<{ children: ReactNode }> = ({ children }) => {
 
   return (
     <ThemeProvider theme={theme == "dark" ? darkTheme : lightTheme}>
+      <h3>click the icon to toggle light\dark mode</h3>
       <span onClick={toggleTheme}>
         {theme == "dark" ? <MdLightMode /> : <MdDarkMode />}
       </span>

@@ -17,12 +17,21 @@ Play with dark mode in next.js with MUI ui. Allow to toggle the mode via icon
   </tr>
   <tr>
     <td>page-provider-with-mui.tsx</td>
-    <td>implement PageProviderWithMui inckuding mode toggle</td>
+    <td>provide theme to the page</td>
   </tr>
+
+<tr>
+    <td>toggle-theme.tsx</td>
+    <td>UI to toggle the theme between light\dark</td>
+  </tr>
+
   <tr>
     <td>themes.ts</td>
     <td>implement define palette of light and dark mode for mui</td>
   </tr>
+
+
+  
 </table>
 
 
@@ -30,8 +39,8 @@ Play with dark mode in next.js with MUI ui. Allow to toggle the mode via icon
 <ul>
 <li>There are two ThemeProvider </li>
 <ul>
-<li>one is imported from @mui/material and handle mui theme</li>
-<li>the other is imported from next-themes and handle persistance</li>
+<li>one is imported from @mui/material and handle mui themes : darkTheme \ lightTheme  </li>
+<li>second is imported from next-themes and handle app themes ('light','dark') persistance</li>
 </ul>
 </ul>
 

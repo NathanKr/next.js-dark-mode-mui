@@ -13,7 +13,7 @@ Play with dark mode in next.js with MUI ui. Allow to toggle the mode via icon
   </tr>
   <tr>
     <td>index.tsx</td>
-    <td>use useTheme from next-themes to show the mode</td>
+    <td>use useTheme from next-themes to show the theme mode and toggle it</td>
   </tr>
   <tr>
     <td>page-provider-with-mui.tsx</td>

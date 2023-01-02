@@ -56,5 +56,5 @@ npm i
 <h3>Run</h3>
 
 ```
-npm run dec
+npm run dev
 ```
